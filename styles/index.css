@@ -1,0 +1,250 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans&family=Poppins:wght@100;200;300;400;600;800&family=Roboto&display=swap");
+:root {
+  --color-button-text: #fff;
+  --color-primary-100: #dee3ea;
+  --color-primary-200: #b2bdcd;
+  --color-primary-300: #5d7290;
+  --color-primary-600: #323d4d;
+  --color-primary-700: #242c37;
+  --color-primary-800: #151a21;
+  --color-primary-900: #0b0e11;
+  --color-secondary-washed-out: #879eed;
+  --color-secondary: #5575e7;
+  --color-accent-glow: rgba(253, 77, 77, 0.3);
+  --color-accent: #fd4d4d;
+  --color-accent-hover: #fd6868;
+  --color-accent-disabled: #f5bfbf;
+  --screen-height-reduction: 0px;
+  --color-primary-100-translucent: rgba(222, 227, 234, 0.15);
+}
+html,
+body {
+  background-color: #000000;
+  color: rgb(190, 190, 190);
+  min-height: 100%;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI,
+    Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji,
+    Segoe UI Symbol;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  border: 0;
+  padding: 0 !important;
+  overflow-x: hidden;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.poppins-light {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+}
+
+.react-select__multi-value {
+  background-color: #323d4d !important;
+  color: #dee3ea !important;
+}
+.react-select__multi-value__label {
+  color: #dee3ea !important;
+}
+:root {
+  --reach-slider: 1;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 0;
+  height: 0;
+}
+
+.react-select__menu-list {
+  background-color: #374151 !important;
+  cursor: pointer;
+}
+.react-select__option {
+  background-color: #374151 !important;
+  cursor: pointer;
+}
+.react-select__option:hover {
+  background-color: #1f2937 !important;
+  cursor: pointer;
+}
+.react-select__control {
+  background-color: #151a21 !important;
+  border: transparent 1px;
+  outline: none;
+  color: white;
+}
+.react-select__control:focus {
+  border: transparent 1px;
+  outline: none;
+}
+.react-select__single-value {
+  color: white !important;
+}
+.react-select__container:focus {
+  outline: none;
+  border: transparent 1px;
+}
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+
+  color: rgb(228, 228, 228);
+}
+html,
+body,
+body > div:first-child,
+div#__next,
+div#__next > div {
+  height: 100%;
+}
+.h1,
+h1 {
+  font-size: calc(1.375rem + 1.5vw);
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI,
+    Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji,
+    Segoe UI Symbol;
+  font-weight: 700;
+}
+@media (min-width: 1200px) {
+  .h1,
+  h1 {
+    font-size: 2rem;
+  }
+}
+.h2,
+h2 {
+  font-size: calc(1.325rem + 0.9vw);
+}
+@media (min-width: 1200px) {
+  .h2,
+  h2 {
+    font-size: 2rem;
+  }
+}
+.h3,
+h3 {
+  font-size: calc(1.3rem + 0.6vw);
+}
+@media (min-width: 1200px) {
+  .h3,
+  h3 {
+    font-size: 1.75rem;
+  }
+}
+.h4,
+h4 {
+  font-size: calc(1.275rem + 0.3vw);
+}
+@media (min-width: 1200px) {
+  .h4,
+  h4 {
+    font-size: 1.5rem;
+  }
+}
+.h5,
+h5 {
+  font-size: 1.25rem;
+}
+.h6,
+h6 {
+  font-size: 1rem;
+}
+a {
+  font-weight: 600;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+a:hover {
+  color: #f0f0f0;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+  #menu.show {
+    width: 75vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    animation: slideIn 250ms;
+    display: flex;
+    z-index: 1000;
+    left: 0;
+    background-color: rgba(17, 24, 39, 1);
+  }
+  #menu.hiddenz {
+    width: 75vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    animation: slideOut 250ms;
+    display: block;
+    z-index: 1000;
+    left: -100vw;
+  }
+
+
+  /* for non-firefox */
+ 
+  #hiddenLULW.show {
+    width: 25vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    animation: slideIn 250ms;
+    backdrop-filter: blur(3px);
+
+    z-index: 1000;
+    left: 0;
+    margin-left: 75vw;
+  }
+  #hiddenLULW.hiddenz {
+    width: 25vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    animation: slideOut 250ms;
+    backdrop-filter: blur(3px);
+
+    z-index: 1000;
+    left: -100vw;
+    margin-left: 75vw;
+  }
+}
+@keyframes slideIn {
+  0% {
+    left: -100vw;
+  }
+  100% {
+    left: 0;
+  }
+}
+@keyframes slideOut {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100vw;
+  }
+}
