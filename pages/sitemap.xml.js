@@ -7,7 +7,9 @@ export const getServerSideProps = ({ res }) => {
   const baseUrl = "https://www.kpadeyinka.com";
   const otherPages = [];
   const staticPages = fs
-    .readdirSync(process.cwd() + "/" + "pages")
+    .readdirSync(
+      process.cwd() + "/" + "pages" || "var/task/.next/server/pages/"
+    )
     .filter((staticPage) => {
       return ![
         "_app.js",
@@ -19,7 +21,10 @@ export const getServerSideProps = ({ res }) => {
     .map((staticPagePath) => {
       if (!staticPagePath.endsWith("js")) {
         const staticPagesz = fs
-          .readdirSync(process.cwd() + "/" + "pages" + "/" + staticPagePath)
+          .readdirSync(
+            process.cwd() + "/" + "pages" + "/" + staticPagePath ||
+              `var/task/.next/server/pages/${staticPagePath}`
+          )
           .filter((staticPage) => {
             return ![
               "_app.js",
