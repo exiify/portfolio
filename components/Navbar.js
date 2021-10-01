@@ -25,9 +25,11 @@ export default function Navbar(props) {
   return (
     <nav className="p-4 flex flex-col">
       <div className="flex">
-        <a className="h1">Kp</a>
+        <a href="/" className="text-3xl font-black">
+          Kp
+        </a>
 
-        <div className="ml-auto mt-2 hidden md:block">
+        <div className="ml-auto  hidden md:block">
           {navigationOptions.map((item) => {
             const name = item.name;
             const href = item.href;
